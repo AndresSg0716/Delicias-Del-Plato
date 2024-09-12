@@ -1,11 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Personalización de Pedidos</title>
+    <link rel="stylesheet" href="Public/Css/per de productos.css">
 </head>
 <body>
-    
+
+<div class="product">
+    <h2>Pizza Margherita - $35,000</h2>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="4000"> Extra queso (+$4,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="5000"> Jamón (+$5,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="3000"> Champiñones (+$3,000)
+    </label>
+</div>
+
+<div class="product">
+    <h2>Lasagna de Carne - $40,000</h2>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="4000"> Salsa bechamel extra (+$4,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="2000"> Parmesano rallado (+$2,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="6000"> Pan de ajo (+$6,000)
+    </label>
+</div>
+
+<div class="product">
+    <h2>Spaghetti a la Carbonara - $38,000</h2>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="5000"> Tocineta extra (+$5,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="4000"> Huevos pochados (+$4,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="7000"> Trufa rallada (+$7,000)
+    </label>
+</div>
+
+<div class="product">
+    <h2>Fettuccine Alfredo con Pollo - $42,000</h2>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="6000"> Pollo extra (+$6,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="3000"> Espinacas (+$3,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="3500"> Champiñones (+$3,500)
+    </label>
+</div>
+
+<div class="product">
+    <h2>Raviolis de Ricotta y Espinaca - $39,000</h2>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="5000"> Salsa de pesto (+$5,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="2500"> Queso parmesano (+$2,500)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="4000"> Salsa de tomate casera (+$4,000)
+    </label>
+</div>
+
+<div class="product">
+    <h2>Ensalada Caprese - $27,000</h2>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="6000"> Jamón serrano (+$6,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="3000"> Aceitunas negras (+$3,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="4000"> Pesto de albahaca (+$4,000)
+    </label>
+</div>
+
+<div class="product">
+    <h2>Tiramisu - $18,000</h2>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="2500"> Salsa de chocolate (+$2,500)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="4000"> Helado de vainilla (+$4,000)
+    </label>
+    <label>
+        <input type="checkbox" class="ingredient" data-price="3500"> Café espresso (+$3,500)
+    </label>
+</div>
+
+
+    <div class="summary">
+        Precio total: $<span id="total">0</span>
+    </div>
+
+    <script src="Public/Js/per de productos.js"></script>
 </body>
 </html>

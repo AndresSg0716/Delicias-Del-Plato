@@ -1,8 +1,14 @@
 :root {
   --color-1: #F5F5F5;
+  /*Color de fondo general, muy claro y neutro, ideal para no distraer la atención de los contenidos*/
   --color-2: #FFFFFF;
+  /*Fondo para áreas de contenido y formularios, proporcionando un contraste sutil con el fondo principal.*/
   --color-3: #333333;
+  /*Color de texto principal para asegurar un buen contraste y legibilidad*/
   --color-4: #757575;
+  /*Texto menos prominente, como descripciones y subtítulos.*/
   --color-5: #00796B;
+  /*Color de acento para elementos interactivos como botones y enlaces, añadiendo un toque de color elegante ymoderno*/
   --color-6: #004D40;
+  /*Descripción: Un tono más oscuro del color de acento, ideal para hover o estados activos*/
 }
