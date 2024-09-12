@@ -94,27 +94,83 @@ footer {
   background-color: #c82333;
 }
 
+/* Favorites Section */
 #favorites-section {
   margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-top: 2px solid #ddd;
+  margin-top: 20px;
 }
 
 #favorites-section h2 {
   font-size: 1.8rem;
   margin-bottom: 10px;
   text-align: center;
+  color: #007bff;
 }
 
 #favorites-list {
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   padding-left: 0;
-  text-align: center;
+  list-style: none;
+  justify-items: center;
 }
 
 #favorites-list li {
-  font-size: 1rem;
-  margin-bottom: 5px;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+  text-align: center;
 }
 
+#favorites-list li:hover {
+  transform: translateY(-5px);
+}
+
+#favorites-list h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#favorites-list p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #333;
+  color: white;
+}
+
+#clear-favorites {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+#clear-favorites:hover {
+  background-color: #c82333;
+}
+
+/* Responsive for small screens */
 @media (max-width: 768px) {
   #menu {
     flex-direction: column;
@@ -124,5 +180,9 @@ footer {
   .menu-item {
     width: 100%;
     max-width: 400px;
+  }
+
+  #favorites-list {
+    grid-template-columns: 1fr;
   }
 }

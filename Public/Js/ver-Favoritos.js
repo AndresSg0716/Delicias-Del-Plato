@@ -1,49 +1,35 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const favoriteButtons = document.querySelectorAll(".favorite-btn");
-  const favoritesList = document.getElementById("favorites-list");
-  const clearFavoritesButton = document.getElementById("clear-favorites");
+document.addEventListener('DOMContentLoaded', function () {
+  const favoriteButtons = document.querySelectorAll('.favorite-btn');
+  const favoritesList = document.getElementById('favorites-list');
+  const clearFavoritesButton = document.getElementById('clear-favorites');
 
-  // Cargar favoritos al cargar la página
-  loadFavorites();
-
+  // Función para agregar el ítem al listado de favoritos
   favoriteButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const itemName = this.getAttribute("data-item");
-      saveFavorite(itemName);
-      loadFavorites(); // Actualiza la lista de favoritos después de agregar
+    button.addEventListener('click', function () {
+      const menuItem = this.closest('.menu-item');
+      const itemName = menuItem.querySelector('h2').textContent;
+      const itemPrice = menuItem.querySelector('p').textContent;
+      const itemAdditions = menuItem.querySelector('ul').cloneNode(true);
+
+      const favoriteItem = document.createElement('li');
+      const favoriteTitle = document.createElement('h3');
+      const favoritePrice = document.createElement('p');
+
+      favoriteTitle.textContent = itemName;
+      favoritePrice.textContent = itemPrice;
+
+      // Se crea un contenedor para cada ítem guardado en favoritos
+      favoriteItem.appendChild(favoriteTitle);
+      favoriteItem.appendChild(favoritePrice);
+      favoriteItem.appendChild(itemAdditions);
+
+      // Se añade el ítem al listado de favoritos
+      favoritesList.appendChild(favoriteItem);
     });
   });
 
-  clearFavoritesButton.addEventListener("click", clearFavorites);
-
-  function saveFavorite(item) {
-    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    if (!favorites.includes(item)) {
-      favorites.push(item);
-      localStorage.setItem("favorites", JSON.stringify(favorites));
-      alert(`${item} ha sido guardado como favorito.`);
-    } else {
-      alert(`${item} ya está en favoritos.`);
-    }
-  }
-
-  function loadFavorites() {
-    let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    favoritesList.innerHTML = ""; // Limpiar la lista antes de cargar
-    if (favorites.length > 0) {
-      favorites.forEach((favorite) => {
-        let li = document.createElement("li");
-        li.textContent = favorite;
-        favoritesList.appendChild(li);
-      });
-    } else {
-      favoritesList.innerHTML = "<li>No tienes favoritos guardados.</li>";
-    }
-  }
-
-  function clearFavorites() {
-    localStorage.removeItem("favorites");
-    alert("Favoritos eliminados.");
-    loadFavorites(); // Recargar la lista después de limpiar
-  }
+  // Función para limpiar la lista de favoritos
+  clearFavoritesButton.addEventListener('click', function () {
+    favoritesList.innerHTML = ''; // Elimina todo el contenido de la lista
+  });
 });
