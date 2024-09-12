@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Favoritos</title>
+    <link rel="stylesheet" href="Public/Css/ver-favoritos.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Menú</h1>
+    </header>
+
+    <section id="menu">
+      <div class="menu-item">
+        <h2>Pizza Margherita</h2>
+        <p>Precio: $35,000</p>
+        <p>Posibles adiciones:</p>
+        <ul>
+          <li>Extra queso ($4,000)</li>
+          <li>Jamón ($5,000)</li>
+          <li>Champiñones ($3,000)</li>
+        </ul>
+        <button class="favorite-btn" data-item="Pizza Margherita">
+          Guardar como Favorito
+        </button>
+      </div>
+
+      <div class="menu-item">
+        <h2>Lasagna de Carne</h2>
+        <p>Precio: $40,000</p>
+        <p>Posibles adiciones:</p>
+        <ul>
+          <li>Salsa bechamel extra ($4,000)</li>
+          <li>Parmesano rallado ($2,000)</li>
+          <li>Pan de ajo ($6,000)</li>
+        </ul>
+        <button class="favorite-btn" data-item="Lasagna de Carne">
+          Guardar como Favorito
+        </button>
+      </div>
+
+      <!-- Agrega más ítems del menú siguiendo el mismo formato -->
+    </section>
+
+    <section id="favorites-section">
+      <h2>Favoritos Guardados</h2>
+      <ul id="favorites-list">
+        <!-- Los favoritos guardados se mostrarán aquí -->
+      </ul>
+    </section>
+
+    <footer>
+      <button id="clear-favorites">Limpiar Favoritos</button>
+    </footer>
+
+    <script src="Public/Js/ver-Favoritos.js"></script>
+  </body>
+</html>
